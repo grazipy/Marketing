@@ -14,20 +14,27 @@
             color: #333;
         }
         header {
-            background-color: #6a0dad; /* Ajustado para o roxo da imagem */
+            background-color: #3d237a; /* Cor ajustada */
             color: white;
             padding: 20px;
             text-align: center;
         }
-        header img {
-            display: block;
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1000px;
             margin: 0 auto;
+        }
+        .header-container img {
+            height: 150px; /* Mesma altura para ambas as imagens */
             max-width: 100%;
-            height: auto;
         }
         header h1 {
-            margin: 20px 0 10px;
+            margin: 20px 0;
             font-size: 2.5rem;
+            width: 100%;
+            text-align: center;
         }
         main {
             padding: 20px;
@@ -46,7 +53,7 @@
         }
         section#chapters h2 {
             font-size: 1.8rem;
-            color: #6a0dad;
+            color: #3d237a;
         }
         ul {
             list-style: none;
@@ -57,7 +64,7 @@
             font-size: 1.2rem;
         }
         a.button {
-            background-color: #6a0dad;
+            background-color: #3d237a;
             color: white;
             border: none;
             padding: 10px 20px;
@@ -74,7 +81,7 @@
             text-transform: uppercase;
         }
         a.button:hover {
-            background-color: #4b0082;
+            background-color: #2c1a5c;
         }
         footer {
             text-align: center;
@@ -89,10 +96,13 @@
 <body>
 
     <header>
-        <img src="logo.png" alt="Logo" id="logo">
+        <div class="header-container">
+            <img src="logo.png" alt="Logo" id="logo">
+            <img src="baner.png" alt="Baner" id="baner">
+        </div>
         <h1>Ebook Exclusivo: Gerenciamento de Tempo</h1>
+        <a href="EBOOK GERENCIANDO SEU TEMPO.pdf" download class="button">Baixar Ebook Grátis</a> <!-- Botão adicionado abaixo do título -->
         <p>Aprenda a organizar seu tempo e aumentar sua produtividade!</p>
-        <img src="baner.png" alt="Baner" id="baner">
     </header>
 
     <main>
@@ -119,7 +129,7 @@
         </section>
 
         <section id="cta">
-            <a href="EBOOK GERENCIANDO SEU TEMPO.pdf" download class="button">Baixar Ebook Grátis</a>
+            <a href="EBOOK GERENCIANDO SEU TEMPO.pdf" download class="button">Baixar Ebook Grátis</a> <!-- Botão original -->
         </section>
     </main>
 
