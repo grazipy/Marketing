@@ -13,67 +13,37 @@
             background-color: #f4f4f4;
             color: #333;
         }
+
         header {
             background-color: #3d237a; /* Cor roxa */
             color: white;
             padding: 20px;
-            text-align: center;
+            width: 100%;
+            box-sizing: border-box; /* Garante que o padding não extrapole a largura */
         }
+
         .header-container {
             display: flex;
-            justify-content: center;
+            flex-direction: column; /* Itens empilhados no mobile */
             align-items: center;
-            max-width: 1000px;
-            margin: 0 auto;
+            width: 100%;
+            text-align: center;
         }
+
         .header-container img {
-            height: 150px; /* Mantém as imagens na mesma altura */
-            max-width: 100%;
-            object-fit: contain;
+            width: 100%; /* Assegura que a imagem respeite a largura da tela */
+            max-width: 300px; /* Limita o tamanho máximo das imagens */
+            height: auto;
+            margin-bottom: 10px;
         }
+
         header h1 {
             margin: 20px 0;
-            font-size: 2.5rem;
+            font-size: 1.8rem; /* Tamanho ajustado para dispositivos móveis */
             text-align: center;
             width: 100%;
         }
-        main {
-            padding: 20px;
-        }
-        section#intro {
-            text-align: center;
-            padding: 20px 0;
-        }
-        section#intro img {
-            max-width: 100%;
-            height: auto;
-            margin: 20px 0;
-        }
-        section#intro p {
-            font-size: 1.2rem;
-            margin: 0 auto;
-            width: 80%;
-            max-width: 800px;
-        }
-        section#chapters {
-            margin: 20px 0;
-            text-align: center;
-        }
-        section#chapters h2 {
-            font-size: 1.8rem;
-            color: #3d237a;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-            text-align: left;
-            margin: 0 auto;
-            max-width: 800px;
-        }
-        ul li {
-            margin: 10px 0;
-            font-size: 1.2rem;
-        }
+
         a.button {
             background-color: #3d237a;
             color: white;
@@ -85,20 +55,34 @@
             text-align: center;
             text-decoration: none;
             display: block;
-            width: 100%;
-            max-width: 300px;
+            max-width: 250px; /* Limite da largura do botão */
             margin-left: auto;
             margin-right: auto;
             text-transform: uppercase;
         }
+
         a.button:hover {
             background-color: #2c1a5c;
         }
+
         footer {
             text-align: center;
             padding: 20px;
             background-color: #333;
             color: white;
+        }
+
+        /* Estilos para telas maiores */
+        @media(min-width: 768px) {
+            .header-container {
+                flex-direction: row; /* Coloca os itens lado a lado em telas maiores */
+                justify-content: space-between; /* Mantém espaçamento entre os itens */
+            }
+            header h1 {
+                font-size: 2.5rem; /* Aumenta o tamanho da fonte em telas maiores */
+                margin-left: 20px;
+                text-align: left;
+            }
         }
     </style>
 </head>
@@ -110,7 +94,7 @@
             <img src="baner.png" alt="Baner" id="baner">
         </div>
         <h1>Obrigado por sua compra!</h1>
-        <a href="EBOOK GERENCIANDO SEU TEMPO.pdf" download class="button">Baixe seu produto</a> <!-- Texto ajustado -->
+        <a href="EBOOK GERENCIANDO SEU TEMPO.pdf" download class="button">Baixe seu produto</a>
     </header>
 
     <main>
@@ -137,7 +121,7 @@
         </section>
 
         <section id="cta">
-            <a href="EBOOK GERENCIANDO SEU TEMPO.pdf" download class="button">Baixe seu produto</a> <!-- Texto ajustado novamente -->
+            <a href="EBOOK GERENCIANDO SEU TEMPO.pdf" download class="button">Baixe seu produto</a>
         </section>
     </main>
 
