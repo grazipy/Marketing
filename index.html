@@ -78,6 +78,19 @@
     position: relative; /* Removido o 'fixed' */
     width: 100%;
         }
+        #passwordModal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #333;
+            z-index: 1000;
+        }
+        #passwordModal input {
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -90,17 +103,14 @@
 
     <main>
         <section id="intro">
-    <h2>Transforme a sua produtividade com nosso ebook</h2>
-    <img src="capa.png" alt="Capa do Ebook" style="max-width: 100%; height: auto; margin: 20px 0;">
-    <p>Descubra como dominar o gerenciamento de tempo, definir metas claras e tornar seu dia mais produtivo. Com dicas práticas e estratégias eficazes, você será capaz de realizar mais com menos esforço.</p>
+            <h2>Transforme a sua produtividade com nosso ebook</h2>
+            <p>Descubra como dominar o gerenciamento de tempo, definir metas claras e tornar seu dia mais produtivo. Com dicas práticas e estratégias eficazes, você será capaz de realizar mais com menos esforço.</p>
         </section>
-        
-        
 
         <section id="chapters">
             <h2>O que você vai encontrar no ebook:</h2>
             <ul>
-        
+                
                 <li>📘 Capítulo 1: Gerenciamento de tempo - Definição de metas</li>
                 <li>📘 Capítulo 2: Dicas de gerenciamento de tempo para trabalhadores domiciliares</li>
                 <li>📘 Capítulo 3: O Método Posec de Gerenciamento de Tempo</li>
@@ -116,17 +126,50 @@
         </section>
 
         <section id="cta">
-            <a href="EBOOK GERENCIANDO SEU TEMPO.pdf" download class="button">Baixar Ebook Grátis</a>
+            <a href="#" id="downloadButton" class="button">Baixar Ebook Grátis</a>
         </section>
-        
     </main>
+
+    <div id="passwordModal">
+        <h2>Insira a senha para baixar:</h2>
+        <input type="password" id="password" required>
+        <button id="submitPassword">Enviar</button>
+        <button id="cancel">Cancelar</button>
+    </div>
 <section id="intro">
-    <h2>  </h2>
-            <p></p>
+            <h2></h2>
 </section>
+
     <footer>
         &copy; 2024 Gerenciamento de Tempo. Todos os direitos reservados.
     </footer>
 
+    <script>
+        const correctPassword = "maistempoagora"; // Senha correta
+        const ebookUrl = "EBOOK GERENCIANDO SEU TEMPO.pdf"; // Nome do arquivo
+
+        document.getElementById('downloadButton').addEventListener('click', function() {
+            document.getElementById('passwordModal').style.display = 'block';
+        });
+
+        document.getElementById('submitPassword').addEventListener('click', function() {
+            const password = document.getElementById('password').value;
+
+            if (password === correctPassword) {
+                window.location.href = ebookUrl; // Redireciona para o download
+            } else {
+                alert('Senha incorreta. Tente novamente.');
+            }
+        });
+
+        document.getElementById('cancel').addEventListener('click', function() {
+            document.getElementById('passwordModal').style.display = 'none';
+        });
+    </script>
+
 </body>
 </html>
+
+        
+       
+   
