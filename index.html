@@ -17,28 +17,62 @@
             background-color: #3d237a; /* Cor roxa */
             color: white;
             padding: 20px;
-            width: 100%; /* Garante que ocupe 100% da largura */
+            text-align: center;
         }
         .header-container {
             display: flex;
-            flex-direction: column; /* Coloca os itens em coluna no mobile */
             justify-content: center;
             align-items: center;
             max-width: 1000px;
             margin: 0 auto;
-            width: 100%;
         }
         .header-container img {
             height: 150px; /* Mantém as imagens na mesma altura */
             max-width: 100%;
             object-fit: contain;
-            margin-bottom: 10px; /* Espaço entre as imagens */
         }
         header h1 {
             margin: 20px 0;
-            font-size: 2rem;
+            font-size: 2.5rem;
             text-align: center;
             width: 100%;
+        }
+        main {
+            padding: 20px;
+        }
+        section#intro {
+            text-align: center;
+            padding: 20px 0;
+        }
+        section#intro img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        section#intro p {
+            font-size: 1.2rem;
+            margin: 0 auto;
+            width: 80%;
+            max-width: 800px;
+        }
+        section#chapters {
+            margin: 20px 0;
+            text-align: center;
+        }
+        section#chapters h2 {
+            font-size: 1.8rem;
+            color: #3d237a;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+        ul li {
+            margin: 10px 0;
+            font-size: 1.2rem;
         }
         a.button {
             background-color: #3d237a;
@@ -51,6 +85,7 @@
             text-align: center;
             text-decoration: none;
             display: block;
+            width: 100%;
             max-width: 300px;
             margin-left: auto;
             margin-right: auto;
@@ -65,19 +100,6 @@
             background-color: #333;
             color: white;
         }
-
-        /* Estilos para telas maiores */
-        @media(min-width: 768px) {
-            .header-container {
-                flex-direction: row; /* Coloca os itens lado a lado em telas maiores */
-                justify-content: space-between; /* Mantém espaçamento entre os itens */
-            }
-            header h1 {
-                font-size: 2.5rem; /* Aumenta o tamanho da fonte em telas maiores */
-                text-align: left;
-                margin-left: 20px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -88,7 +110,7 @@
             <img src="baner.png" alt="Baner" id="baner">
         </div>
         <h1>Obrigado por sua compra!</h1>
-        <a href="EBOOK GERENCIANDO SEU TEMPO.pdf" download class="button">Baixe seu produto</a>
+        <a href="EBOOK GERENCIANDO SEU TEMPO.pdf" download class="button">Baixe seu produto</a> <!-- Texto ajustado -->
     </header>
 
     <main>
@@ -115,7 +137,7 @@
         </section>
 
         <section id="cta">
-            <a href="EBOOK GERENCIANDO SEU TEMPO.pdf" download class="button">Baixe seu produto</a>
+            <a href="EBOOK GERENCIANDO SEU TEMPO.pdf" download class="button">Baixe seu produto</a> <!-- Texto ajustado novamente -->
         </section>
     </main>
 
