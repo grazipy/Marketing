@@ -33,12 +33,18 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column; /* Alinha verticalmente */
             width: 100%;
         }
 
-        .header-container img {
-            height: 150px; /* Mantém as imagens na mesma altura */
-            width: auto; /* Mantém a proporção da imagem */
+        #logo {
+            height: 100px; /* Altura desejada para o logo */
+            margin-bottom: 10px; /* Espaço abaixo do logo */
+        }
+
+        #baner {
+            height: 150px; /* Altura desejada para o banner */
+            width: auto; /* Mantém a proporção */
             max-width: 100%;
             object-fit: contain;
         }
