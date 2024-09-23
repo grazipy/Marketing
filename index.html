@@ -18,10 +18,22 @@
             color: white;
             padding: 20px;
             text-align: center;
+            position: relative;
         }
         header h1 {
             margin: 0;
             font-size: 2.5rem;
+        }
+        header img {
+            position: absolute;
+            top: 20px;
+            height: 80px;
+        }
+        header #logo {
+            left: 20px;
+        }
+        header #bater {
+            right: 20px;
         }
         main {
             padding: 20px;
@@ -75,7 +87,7 @@
             padding: 20px;
             background-color: #333;
             color: white;
-            position: relative; /* Removido o 'fixed' */
+            position: relative;
             width: 100%;
         }
     </style>
@@ -83,7 +95,9 @@
 <body>
 
     <header>
+        <img src="logo.png" alt="Logo" id="logo">
         <h1>Ebook Exclusivo: Gerenciamento de Tempo</h1>
+        <img src="bater.png" alt="Bater" id="bater">
         <p>Aprenda a organizar seu tempo e aumentar sua produtividade!</p>
     </header>
 
@@ -111,7 +125,7 @@
         </section>
 
         <section id="cta">
-            <a href="EBOOK GERENCIANDO SEU TEMPO.pdf" download class="button">Baixar Ebook </a>
+            <a href="EBOOK GERENCIANDO SEU TEMPO.pdf" download class="button">Baixar Ebook Grátis</a>
         </section>
     </main>
 
